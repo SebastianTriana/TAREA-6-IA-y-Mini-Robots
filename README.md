@@ -70,21 +70,21 @@ Instalar dependencias:
 ```bash
 pip install numpy tensorflow scikit-learn matplotlib
 ```
-#Cómo ejecutar cada punto
+# Cómo ejecutar cada punto
 
-##Punto 1: NAND y XOR
+## Punto 1: NAND y XOR
 ```bash
 python punto1_NAND_XOR.py
 ```
-##Punto 2: Fashion MNIST
+## Punto 2: Fashion MNIST
 ```bash
 python punto2_fashion_mnist.py
 ```
-##Punto 3: Dataset externo (Iris)
+## Punto 3: Dataset externo (Iris)
 ```bash
 python punto3_dataset_externo.py
 ```
-#Autores
+# Autores
 Sebastián Triana
 Juan Diego Camacho
 
