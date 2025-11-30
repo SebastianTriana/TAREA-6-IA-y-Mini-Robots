@@ -5,26 +5,6 @@
 Este repositorio contiene el desarrollo completo de los 3 puntos solicitados en la **Tarea #5** del curso *IA y Mini Robots*.  
 Se implementan modelos de redes neuronales, clasificación con TensorFlow (Fashion-MNIST) y un ejercicio con dataset externo aplicando una red neuronal y análisis de pesos aprendidos.
 
----
-
-## Estructura del repositorio
-
-TAREA-5-IA-y-Mini-Robots/
-│
-├── punto1_NAND_XOR.py
-├── punto2_fashion_mnist.py
-├── punto3_dataset_externo.py
-│
-├── resultados/
-│ ├── nand_predicciones.txt
-│ ├── xor_predicciones.txt
-│ ├── fashion_mnist_metricas.txt
-│ ├── dataset_externo_pesos.txt
-│
-└── README.md
-
-yaml
-Copy code
 
 ---
 
@@ -100,7 +80,7 @@ python punto1_NAND_XOR.py
 ```bash
 python punto2_fashion_mnist.py
 ```
-Punto 3: Dataset externo (Iris)
+##Punto 3: Dataset externo (Iris)
 ```bash
 python punto3_dataset_externo.py
 ```
