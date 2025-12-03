@@ -1,92 +1,106 @@
-# TAREA 5 – Inteligencia Artificial y Mini Robots  
-### Sebastián Triana – Juan Diego Camacho  
-### Universidad Nacional de Colombia – 2025-2
+# TAREA 6 -- Inteligencia Artificial y Mini Robots
 
-Este repositorio contiene el desarrollo completo de los 3 puntos solicitados en la **Tarea #5** del curso *IA y Mini Robots*.  
-Se implementan modelos de redes neuronales, clasificación con TensorFlow (Fashion-MNIST) y un ejercicio con dataset externo aplicando una red neuronal y análisis de pesos aprendidos.
+### Sebastián Triana -- Juan Diego Camacho
 
+### Universidad Nacional de Colombia -- 2025-2
 
----
+Este repositorio contiene el desarrollo completo de los **4 puntos**
+solicitados en la **Tarea #6** del curso *IA y Mini Robots*.\
+Los ejercicios abarcan regresión mediante redes neuronales,
+clasificación supervisada y análisis de modelos utilizando el dataset
+**Iris**.
 
-# Punto 1 — Redes neuronales para NAND y XOR
+------------------------------------------------------------------------
 
-En este punto se entrenaron **dos redes neuronales** con TensorFlow/Keras, ambas con **2 capas ocultas**, para aprender a aproximar el comportamiento de las compuertas:
+# Punto 1 --- Multiplicación de matrices 2×2 usando *MLPRegressor*
 
-- **NAND**
-- **XOR**
+En este punto se genera un dataset sintético con **50.000** ejemplos de
+multiplicación de matrices 2×2:
 
-Cada red se entrenó con backpropagation y luego se imprimieron:
+\[ C = A `\times `{=tex}B,`\quad `{=tex}A,B,C
+`\in `{=tex}`\mathbb{R}`{=tex}\^{2 `\times 2`{=tex}} \]
 
-- Predicciones sobre las cuatro combinaciones posibles.
-- Los **pesos aprendidos** en cada capa.
+Se entrena un **MLPRegressor** con:
 
-**Archivos relevantes:**
+-   Dos capas ocultas: **128** y **64** neuronas\
+-   Activación ReLU\
+-   Normalización de entrada y salida\
+-   Evaluación con **MAE**\
+-   Comparación con 10 ejemplos nuevos
 
-- `punto1_NAND_XOR.py`
-- `resultados/nand_predicciones.txt`
-- `resultados/xor_predicciones.txt`
+**Archivo:** `punto1.py`
 
----
+------------------------------------------------------------------------
 
-# Punto 2 — Clasificación con Fashion-MNIST usando TensorFlow
+# Punto 2 --- Clasificación Iris con SVC + GridSearchCV
 
-Se descargó el dataset **Fashion-MNIST** y se entrenó un modelo simple de clasificación usando:
+Se entrena un modelo **SVC** para clasificar las 3 clases del dataset
+Iris.\
+Incluye:
 
-- Capa `Flatten`
-- Capa oculta densa
-- Capa de salida softmax (10 clases)
+-   Estandarización\
+-   GridSearchCV con hiperparámetros (C, `\gamma`{=tex}, kernel)\
+-   Reporte de *best params*\
+-   Accuracy y *classification report*
 
-Se presentan:
+**Archivo:** `punto2.py`
 
-- Accuracy en entrenamiento y prueba  
-- Matriz de confusión  
-- Ejemplos correctamente e incorrectamente clasificados  
+------------------------------------------------------------------------
 
-**Archivo relevante:**  
-`punto2_fashion_mnist.py`
+# Punto 3 --- Clasificación Iris con KNN + Validación cruzada
 
----
+En este punto se experimenta con **KNeighborsClassifier** probando
+valores de (k):
 
-# Punto 3 — Dataset externo y red neuronal personalizada
+-   Estandarización\
+-   Validación cruzada 5-fold\
+-   Selección del mejor (k)\
+-   Evaluación final en test
 
-Se eligió el dataset **Iris** de scikit-learn.  
-El pipeline incluyó:
+**Archivo:** `punto3.py`
 
-1. Visualización de *features* y *clases*.  
-2. One-hot encoding del rótulo (corregido usando `OneHotEncoder(sparse_output=False)`).  
-3. Entrenamiento de una red neuronal fully-connected.  
-4. Métricas de desempeño.  
-5. **Extracción e interpretación de los pesos aprendidos**.
+------------------------------------------------------------------------
 
-**Archivo relevante:**  
-`punto3_dataset_externo.py`
+# Punto 4 --- Clasificación Iris con Árbol de Decisión
 
----
+Se entrena un **DecisionTreeClassifier** con profundidad máxima 3.\
+Incluye:
 
-# ⚙️ Requisitos
+-   Partición de dataset\
+-   Accuracy en test\
+-   Impresión de reglas del árbol usando `export_text`
 
-Instalar dependencias:
+**Archivo:** `punto4.py`
 
-```bash
-pip install numpy tensorflow scikit-learn matplotlib
+------------------------------------------------------------------------
+
+# Requisitos
+
+Instalar dependencias ejecutando:
+
+``` bash
+pip install numpy scikit-learn
 ```
-# Cómo ejecutar cada punto
 
-## Punto 1: NAND y XOR
-```bash
-python punto1_NAND_XOR.py
+------------------------------------------------------------------------
+
+# Ejecución
+
+Cada punto puede ejecutarse con:
+
+``` bash
+python punto1.py
+python punto2.py
+python punto3.py
+python punto4.py
 ```
-## Punto 2: Fashion MNIST
-```bash
-python punto2_fashion_mnist.py
-```
-## Punto 3: Dataset externo (Iris)
-```bash
-python punto3_dataset_externo.py
-```
+
+------------------------------------------------------------------------
+
 # Autores
-Sebastián Triana
-Juan Diego Camacho
 
-Universidad Nacional de Colombia
-Facultad de Ingeniería – 2025-2
+-   Sebastián Triana\
+-   Juan Diego Camacho
+
+Universidad Nacional de Colombia\
+Facultad de Ingeniería -- 2025-2
