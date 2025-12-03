@@ -22,10 +22,10 @@ multiplicación de matrices 2×2:
 
 Se entrena un **MLPRegressor** con:
 
--   Dos capas ocultas: **128** y **64** neuronas\
--   Activación ReLU\
--   Normalización de entrada y salida\
--   Evaluación con **MAE**\
+-   Dos capas ocultas: **128** y **64** neuronas
+-   Activación ReLU
+-   Normalización de entrada y salida
+-   Evaluación con **MAE**
 -   Comparación con 10 ejemplos nuevos
 
 **Archivo:** `punto1.py`
@@ -38,9 +38,9 @@ Se entrena un modelo **SVC** para clasificar las 3 clases del dataset
 Iris.\
 Incluye:
 
--   Estandarización\
--   GridSearchCV con hiperparámetros (C, `\gamma`{=tex}, kernel)\
--   Reporte de *best params*\
+-   Estandarización
+-   GridSearchCV con hiperparámetros (C, `\gamma`{=tex}, kernel)
+-   Reporte de *best params*
 -   Accuracy y *classification report*
 
 **Archivo:** `punto2.py`
@@ -52,9 +52,9 @@ Incluye:
 En este punto se experimenta con **KNeighborsClassifier** probando
 valores de (k):
 
--   Estandarización\
--   Validación cruzada 5-fold\
--   Selección del mejor (k)\
+-   Estandarización
+-   Validación cruzada 5-fold
+-   Selección del mejor (k)
 -   Evaluación final en test
 
 **Archivo:** `punto3.py`
@@ -66,8 +66,8 @@ valores de (k):
 Se entrena un **DecisionTreeClassifier** con profundidad máxima 3.\
 Incluye:
 
--   Partición de dataset\
--   Accuracy en test\
+-   Partición de dataset
+-   Accuracy en test
 -   Impresión de reglas del árbol usando `export_text`
 
 **Archivo:** `punto4.py`
