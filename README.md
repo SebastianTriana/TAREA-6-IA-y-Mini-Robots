@@ -99,7 +99,7 @@ python punto4.py
 
 # Autores
 
--   Sebastián Triana\
+-   Sebastián Triana
 -   Juan Diego Camacho
 
 Universidad Nacional de Colombia\
